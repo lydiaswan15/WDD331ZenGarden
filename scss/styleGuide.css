@@ -1,0 +1,52 @@
+h1 {
+  color: #F18805;
+  font-size: 7em;
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  color: #94A187;
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #D95D39;
+}
+
+a:hover {
+  color: #94A187;
+}
+
+p {
+  max-width: 50%;
+}
+
+@use 'atoms';
+@use 'molecules';
+@use 'organisms' as o;
+#lightGreen {
+  background-color: #94A187;
+}
+
+#lightOrange {
+  background-color: #F18805;
+}
+
+#darkOrange {
+  background-color: #D95D39;
+}
+
+#darkBlue {
+  background-color: #0E1428;
+  color: white;
+}
+
+#lightTeal {
+  background-color: #7B9E89;
+}
+/*# sourceMappingURL=styleGuide.css.map */

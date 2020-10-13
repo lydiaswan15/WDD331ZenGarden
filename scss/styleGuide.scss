@@ -1,0 +1,15 @@
+@import 'atoms';
+@use 'atoms'; 
+@use 'molecules';
+@use 'organisms' as o;
+@import 'variables';
+
+#lightGreen{background-color: $lightGreen;}
+#lightOrange{background-color: $lightOrange;}
+#darkOrange{background-color: $darkOrange;}
+#darkBlue{
+    background-color: $darkBlue;
+    color: white;
+}
+#lightTeal{background-color: $lightTeal;}
+
