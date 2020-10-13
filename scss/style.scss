@@ -1,0 +1,17 @@
+@import 'atoms';
+@use 'atoms'; 
+@use 'molecules';
+@use 'organisms' as o;
+@import 'variables';
+
+@mixin mainParagraphs {
+    font-family: $headings;
+}
+
+body{
+    font-family: $paragraphs;
+}
+
+#zen-summary{
+    @include mainParagraphs();
+}

@@ -1,0 +1,39 @@
+h1 {
+  color: #F18805;
+  font-size: 7em;
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  color: #94A187;
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #D95D39;
+}
+
+a:hover {
+  color: #94A187;
+}
+
+p {
+  max-width: 50%;
+}
+
+@use 'atoms';
+@use 'molecules';
+@use 'organisms' as o;
+body {
+  font-family: "Playfair Display", serif;
+}
+
+#zen-summary {
+  font-family: "Oswald", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

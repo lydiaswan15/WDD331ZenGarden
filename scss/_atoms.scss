@@ -1,0 +1,28 @@
+@import 'variables';
+
+h1{
+    color: $lightOrange;
+    font-size: 7em;
+    font-family: $headings;
+}
+
+h2{
+    color: $lightGreen;
+    font-size: 3em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: $darkOrange;
+    &:hover{
+        color: $lightGreen;
+    }
+}
+
+p{
+    max-width: 50%;
+}
