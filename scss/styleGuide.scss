@@ -4,12 +4,57 @@
 @use 'organisms' as o;
 @import 'variables';
 
-#lightGreen{background-color: $lightGreen;}
-#lightOrange{background-color: $lightOrange;}
-#darkOrange{background-color: $darkOrange;}
-#darkBlue{
-    background-color: $darkBlue;
+html, body{
+    margin: 0px;
+}
+body{
+    font-family: $paragraphs;
+}
+
+h1, h2{
+    font-family: $headings;
+}
+
+header{
+    padding-left: 80vw;
+    background-color: black;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 5vh;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+
+}
+h1{
+    margin: 0px;
+    height: 88vh;
+    font-size: 400px;
+}
+
+#bannerImg{
+    display: block;
+    width: 100%;
+}
+
+#gridSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#stylesHeader{
+    position: absolute;
+    margin-top: .5em;
     color: white;
 }
-#lightTeal{background-color: $lightTeal;}
+
+#eyeOnHand{
+    width: 100px;
+}
 
