@@ -1,11 +1,97 @@
-@use 'atoms';
-@use 'molecules';
-@use 'organisms' as o;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 body {
-  font-family: "Roboto";
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-#zen-summary {
-  font-family: "Prata", serif;
+header {
+  display: block;
+  padding-bottom: 200px;
+  background-color: #F7EFDE;
+}
+
+header h1, header h2 {
+  animation: topToBottom 10s linear infinite;
+  -ms-animation: topToBottom 10s linear infinite;
+  -webkit-animation: topToBottom 10s linear infinite;
+  color: black;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+header h1 {
+  animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  left: 35%;
+  right: 35%;
+}
+
+header h2 {
+  animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  left: 28%;
+  right: 28%;
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -moz-transform: translateY(-50px);
+  }
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    -moz-transform: translateY(50px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
