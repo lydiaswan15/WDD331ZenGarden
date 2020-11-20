@@ -10,7 +10,8 @@
 }
 
 html {
-	margin: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 body{
@@ -23,6 +24,12 @@ body{
     @include mainParagraphs();
 }
 
+.page-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
 //////////////////////////////////////////////////////////////////////
 //Title Animation
 //Dillon
@@ -31,7 +38,11 @@ body{
 header {
     display: block;
     padding-bottom: 200px;
-    background-color: #F7EFDE;
+	background-color: #F7EFDE;
+	margin: 0;
+	grid-column-start: 1;
+	grid-column-end: span 3;
+	grid-row: 1;
 }
 
 header h1, header h2{
@@ -90,3 +101,34 @@ header h2{
 	80% { opacity: 0; }
 	100% { opacity: 0; }
 }
+
+//////////////////////////////////////////////////////////////////////
+//Circles Section
+//Dillon
+//#F09F2D
+//////////////////////////////////////////////////////////////////////\
+
+.summary, .preamble, .explanation {
+	background-color: #F09F2D;
+	margin: 0;
+	width: 100px;
+	height: 100px;
+	background: red;
+	border-radius: 50%;
+	grid-row: 2;
+}
+
+.summary {
+	grid-column: 1
+}
+
+.preamble {
+	grid-column: 2;
+}
+
+.explanation {
+	grid-column: 3;
+}
+
+
+
