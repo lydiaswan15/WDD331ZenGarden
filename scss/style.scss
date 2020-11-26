@@ -24,11 +24,14 @@ body{
     @include mainParagraphs();
 }
 
-.page-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-}
+// I commented this out temporarily. I think that we will need this whole section to be on a grid
+// for the red circles, but it was hecka confusing me, haha!
+
+// .page-wrapper {
+// 	display: grid;
+// 	grid-template-columns: 1fr 1fr 1fr;
+// 	grid-template-rows: 1fr 1fr 1fr 1fr;
+// }
 
 //////////////////////////////////////////////////////////////////////
 //Title Animation
@@ -108,27 +111,43 @@ header h2{
 //#F09F2D
 //////////////////////////////////////////////////////////////////////\
 
-.summary, .preamble, .explanation {
-	background-color: #F09F2D;
-	margin: 0;
-	width: 100px;
-	height: 100px;
-	background: red;
-	border-radius: 50%;
-	grid-row: 2;
-}
+// .summary, .preamble, .explanation {
+// 	background-color: #F09F2D;
+// 	margin: 0;
+// 	width: 100px;
+// 	height: 100px;
+// 	background: red;
+// 	border-radius: 50%;
+// 	// grid-row: 2;
+// }
 
-.summary {
-	grid-column: 1
-}
+// .summary {
+// 	grid-column: 1
+// }
 
-.preamble {
-	grid-column: 2;
-}
+// .preamble {
+// 	grid-column: 2;
+// }
 
-.explanation {
-	grid-column: 3;
-}
+// .explanation {
+// 	grid-column: 3;
+// }
 
+
+
+// Side bar Menu thingamabob
+
+.sidebar {
+	background-color: red;
+	// position: absolute;
+	// top: 100%;
+	// position: absolute;
+}
+.wrapper{
+	position: absolute;
+	background-color: red;
+	top: 0px;
+	right: 0px;
+}
 
 
