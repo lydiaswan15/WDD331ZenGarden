@@ -19,7 +19,6 @@ body{
     @include mainParagraphs();
 }
 
-<<<<<<< HEAD
 // I commented this out temporarily. I think that we will need this whole section to be on a grid
 // for the red circles, but it was hecka confusing me, haha!
 
@@ -28,13 +27,12 @@ body{
 // 	grid-template-columns: 1fr 1fr 1fr;
 // 	grid-template-rows: 1fr 1fr 1fr 1fr;
 // }
-=======
+
 .page-wrapper {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-template-rows: 100px 600px 1fr 1fr;
 }
->>>>>>> fcaf3129d0ce31d0eb67b97a8eb274449416429b
 
 //////////////////////////////////////////////////////////////////////
 //Title Animation
@@ -114,7 +112,7 @@ header h2{
 //#F09F2D
 //////////////////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
+
 // .summary, .preamble, .explanation {
 // 	background-color: #F09F2D;
 // 	margin: 0;
@@ -225,7 +223,6 @@ header h2{
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row: 4;
->>>>>>> fcaf3129d0ce31d0eb67b97a8eb274449416429b
 }
 
 
