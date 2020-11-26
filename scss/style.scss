@@ -9,11 +9,6 @@
     // font-family: $headings;
 }
 
-html {
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
 body{
     font-family: 'Lato', sans-serif;
     margin: 0;
@@ -24,6 +19,7 @@ body{
     @include mainParagraphs();
 }
 
+<<<<<<< HEAD
 // I commented this out temporarily. I think that we will need this whole section to be on a grid
 // for the red circles, but it was hecka confusing me, haha!
 
@@ -32,6 +28,13 @@ body{
 // 	grid-template-columns: 1fr 1fr 1fr;
 // 	grid-template-rows: 1fr 1fr 1fr 1fr;
 // }
+=======
+.page-wrapper {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: 100px 600px 1fr 1fr;
+}
+>>>>>>> fcaf3129d0ce31d0eb67b97a8eb274449416429b
 
 //////////////////////////////////////////////////////////////////////
 //Title Animation
@@ -44,7 +47,7 @@ header {
 	background-color: #F7EFDE;
 	margin: 0;
 	grid-column-start: 1;
-	grid-column-end: span 3;
+	grid-column-end: 4;
 	grid-row: 1;
 }
 
@@ -109,8 +112,9 @@ header h2{
 //Circles Section
 //Dillon
 //#F09F2D
-//////////////////////////////////////////////////////////////////////\
+//////////////////////////////////////////////////////////////////////
 
+<<<<<<< HEAD
 // .summary, .preamble, .explanation {
 // 	background-color: #F09F2D;
 // 	margin: 0;
@@ -148,6 +152,80 @@ header h2{
 	background-color: red;
 	top: 0px;
 	right: 0px;
+=======
+.summary, .preamble {
+	background-color: #F09F2D;
+	margin: 0;
+	width: 500px;
+	height: 500px;
+	background: red;
+	border-radius: 50%;
+	margin: 50px;
+}
+
+.summary {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row: 2;
+}
+
+.preamble {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row: 2;
+}
+
+.preamble h3 {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.preamble p, .summary p {
+	opacity: 0;
+	text-align: center;
+}
+
+.preamble p:hover, .summary p:hover {
+	opacity: 1;
+}
+
+.summary::before {
+	content: "Summary";
+	font-weight: bold;
+	font-size: 1.17em;
+	float: center;
+}
+
+//////////////////////////////////////////////////////////////////////
+// Sections
+//////////////////////////////////////////////////////////////////////
+
+.intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row: 3;
+	margin: 50px;
+}
+
+.sidebar {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row: 4;
+>>>>>>> fcaf3129d0ce31d0eb67b97a8eb274449416429b
 }
 
 
