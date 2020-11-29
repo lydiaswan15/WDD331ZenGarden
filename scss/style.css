@@ -5,8 +5,15 @@ body {
   padding: 0;
 }
 
-<<<<<<< HEAD
-=======
+.page-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
 .page-wrapper {
   display: -ms-grid;
   display: grid;
@@ -16,7 +23,6 @@ body {
       grid-template-rows: 100px 600px 1fr 1fr;
 }
 
->>>>>>> fcaf3129d0ce31d0eb67b97a8eb274449416429b
 header {
   display: block;
   padding-bottom: 200px;
@@ -113,7 +119,30 @@ header h2 {
   }
 }
 
-<<<<<<< HEAD
+.summary, .preamble, .explanation {
+  background-color: #F09F2D;
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+}
+
+.summary {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.preamble {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.explanation {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
 .sidebar {
   background-color: red;
 }
@@ -123,7 +152,8 @@ header h2 {
   background-color: red;
   top: 0px;
   right: 0px;
-=======
+}
+
 .summary, .preamble {
   background-color: #F09F2D;
   margin: 0;
@@ -204,6 +234,5 @@ header h2 {
   grid-column-end: 4;
   -ms-grid-row: 4;
   grid-row: 4;
->>>>>>> fcaf3129d0ce31d0eb67b97a8eb274449416429b
 }
 /*# sourceMappingURL=style.css.map */

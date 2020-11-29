@@ -5,3 +5,5 @@
 
 //     document.getElementById("menu-icon").addEventListener("click", toggleMenuClose);
 // }
+
+console.log("checking");
