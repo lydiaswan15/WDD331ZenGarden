@@ -19,6 +19,7 @@ body{
     @include mainParagraphs();
 }
 
+
 // I commented this out temporarily. I think that we will need this whole section to be on a grid
 // for the red circles, but it was hecka confusing me, haha!
 
@@ -33,6 +34,8 @@ body{
 	grid-template-columns: auto auto auto;
 	grid-template-rows: 100px 600px 1fr 1fr;
 }
+
+
 
 //////////////////////////////////////////////////////////////////////
 //Title Animation
@@ -144,6 +147,17 @@ header h2{
 	// position: absolute;
 	// top: 100%;
 	// position: absolute;
+}
+.sidebar{
+	.design-selection{
+		display: none;
+	}
+}
+
+.sidebar :hover{
+	.design-selection{
+		display: block;
+	}
 }
 .wrapper{
 	position: absolute;

@@ -147,6 +147,14 @@ header h2 {
   background-color: red;
 }
 
+.sidebar .design-selection {
+  display: none;
+}
+
+.sidebar :hover .design-selection {
+  display: block;
+}
+
 .wrapper {
   position: absolute;
   background-color: red;
