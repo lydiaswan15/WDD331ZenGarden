@@ -243,4 +243,21 @@ header h2 {
   -ms-grid-row: 4;
   grid-row: 4;
 }
+
+/* -- i put this in css because it wasn't working in scss :( hopefully we can fix it later lol*/
+/* ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color:#F7EFDE;
+}
+a:hover{
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+} */
 /*# sourceMappingURL=style.css.map */

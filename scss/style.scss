@@ -159,6 +159,7 @@ header h2{
 		display: block;
 	}
 }
+
 .wrapper{
 	position: absolute;
 	background-color: red;
@@ -208,6 +209,23 @@ header h2{
 	float: center;
 }
 
+//just adding some styling to make the menu look prettier, feel free to change :) -chloe
+// also none of this is working in scss so i just put it at the bottom in the CSS file </3
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color:#F7EFDE;
+}
+a:hover{
+	font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
 //////////////////////////////////////////////////////////////////////
 // Sections
 //////////////////////////////////////////////////////////////////////
