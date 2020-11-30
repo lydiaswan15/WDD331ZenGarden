@@ -245,7 +245,7 @@ header h2 {
 }
 
 /* -- i put this in css because it wasn't working in scss :( hopefully we can fix it later lol*/
-/* ul{
+ul{
   list-style: none;
 }
 
@@ -259,5 +259,5 @@ a:hover{
   letter-spacing: 2px;
   transition: all .4s ease;
   -webkit-transition: all .4s ease;
-} */
+}
 /*# sourceMappingURL=style.css.map */
