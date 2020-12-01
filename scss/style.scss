@@ -142,16 +142,19 @@ header h2{
 
 // Side bar Menu thingamabob - opens on a hover. 
 // Adding the single word that will be used in the Menu. When hovered, the menu will appear. 
-
+	
 	.wrapper{
 		position: absolute;
-		background-color: red;
 		top: 0px;
 		right: 0px;	
-
+		height: 100vh;
+		width: 25vw;
+		background-color: red;
 	}
+
 	.wrapper::before{
 		content: 'Menu';
+
 	}
 
 	.design-selection, .design-archives, .zen-resources{
@@ -160,14 +163,26 @@ header h2{
 		// 	display: none;
 		// }
 	}
+	.sidebar :first-child{
+		background-color: red;
+	}
 
 	.sidebar :hover{
 		// When hovering over the "Menu", the title of the names will appear. 
+		animation: sidebarSlide 12s;
+		animation-fill-mode: forwards; 
+	
 		.design-selection, .design-archives, .zen-resources{
 			display: block;
+			animation: none;
 		}
-		.wrapper::before{
-			background-color: yellow;
+	}
+
+	// Animation for sliding the side bar
+
+	@keyframes sidebarSlide{
+		100%{
+			transform: translateX(-25vw);
 		}
 	}
 
