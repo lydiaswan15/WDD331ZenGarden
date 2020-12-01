@@ -141,31 +141,41 @@ header h2{
 
 
 // Side bar Menu thingamabob - opens on a hover. 
+// Adding the single word that will be used in the Menu. When hovered, the menu will appear. 
 
-.sidebar {
-	background-color: red;
-	// position: absolute;
-	// top: 100%;
-	// position: absolute;
-}
-.sidebar{
-	.design-selection{
+	.wrapper{
+		position: absolute;
+		background-color: red;
+		top: 0px;
+		right: 0px;	
+
+	}
+	.wrapper::before{
+		content: 'Menu';
+	}
+
+	.design-selection, .design-archives, .zen-resources{
 		display: none;
+		// ul{
+		// 	display: none;
+		// }
 	}
-}
 
-.sidebar :hover{
-	.design-selection{
-		display: block;
+	.sidebar :hover{
+		// When hovering over the "Menu", the title of the names will appear. 
+		.design-selection, .design-archives, .zen-resources{
+			display: block;
+		}
+		.wrapper::before{
+			background-color: yellow;
+		}
 	}
-}
 
-.wrapper{
-	position: absolute;
-	background-color: red;
-	top: 0px;
-	right: 0px;
-}
+
+
+
+
+// Summary and Preamble. 
 .summary, .preamble {
 	background-color: #F09F2D;
 	margin: 0;
