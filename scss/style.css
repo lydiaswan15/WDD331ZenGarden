@@ -25,14 +25,17 @@ body {
 
 header {
   display: block;
-  padding-bottom: 200px;
   background-color: #F7EFDE;
-  margin: 0;
+  margin: auto;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
   -ms-grid-row: 1;
   grid-row: 1;
+  line-height: 100vh;
+  height: 100vh;
+  text-align: center;
+  background-color: red;
 }
 
 header h1, header h2 {
@@ -44,7 +47,7 @@ header h1, header h2 {
   overflow: hidden;
   position: absolute;
   font-size: 50px;
-  padding-top: 30px;
+  margin: 0px;
 }
 
 header h1 {
@@ -126,6 +129,8 @@ header h2 {
   height: 100px;
   background: red;
   border-radius: 50%;
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
 .summary {
