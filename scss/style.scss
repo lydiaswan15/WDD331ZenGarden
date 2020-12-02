@@ -115,15 +115,18 @@ header h2{
 //#F09F2D
 //////////////////////////////////////////////////////////////////////
 
-
-.summary, .preamble, .explanation {
+.summary, .preamble{
 	background-color: #F09F2D;
 	margin: 0;
 	width: 100px;
 	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	margin-top: auto; margin-bottom: auto;
 	background: red;
 	border-radius: 50%;
 	grid-row: 2;
+	position: relative;
 }
 
 .summary {
@@ -205,8 +208,8 @@ header h2{
 }
 
 .summary {
-	grid-column-start: 1;
-	grid-column-end: 2;
+	// grid-column-start: 1;
+	// grid-column-end: 2;
 	grid-row: 2;
 }
 
@@ -235,6 +238,9 @@ header h2{
 	font-weight: bold;
 	font-size: 1.17em;
 	float: center;
+	line-height: 100%;
+	text-align: center;
+	
 }
 
 //just adding some styling to make the menu look prettier, FEEL FREE TO CHANGE :) -chloe
