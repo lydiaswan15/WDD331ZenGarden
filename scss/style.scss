@@ -4,7 +4,9 @@
 // @use 'organisms' as o;
 // @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+html{
+	overflow-x: hidden;
+}
 @mixin mainParagraphs {
     // font-family: $headings;
 }
@@ -114,12 +116,12 @@ header h2{
 //Dillon
 //#F09F2D
 //////////////////////////////////////////////////////////////////////
-
+$circleHeight: 100px;
 .summary, .preamble{
 	background-color: #F09F2D;
 	margin: 0;
 	width: 100px;
-	height: 100px;
+	height: $circleHeight;
 	line-height: 100px;
 	text-align: center;
 	margin-top: auto; margin-bottom: auto;
@@ -210,7 +212,7 @@ header h2{
 .summary {
 	// grid-column-start: 1;
 	// grid-column-end: 2;
-	grid-row: 2;
+	// grid-row: 2;
 }
 
 .preamble {
@@ -288,7 +290,43 @@ a:hover{
 
 	grid-column-start: 1;
 	grid-column-end: 4;
-	grid-row: 4;
+}
+
+
+//Drop down information
+#zen-supporting{
+	margin-top: 100vh;
+}
+
+.supporting div{
+	grid-column: 1/4;
+	background-color: green;
+	margin: 1em;
+	height: 4em;
+	p{
+		display: none;
+		// opacity: 0%;
+	}
+
+	&:hover{
+		// height: auto;
+		animation: explanationsExpand 1s;
+		animation-fill-mode: forwards;
+		// height: auto;
+		p{
+			display: block
+		}
+	}
+}
+// keyframes for the animation where you hover over the sections and they increase in size. 
+@keyframes explanationsExpand{
+	0%{
+		height: 4em;
+	}
+	100%{
+		background-color: yellow;
+		height: auto
+	}
 }
 
 
