@@ -237,12 +237,16 @@ header h2 {
 }
 
 .preamble p, .summary p {
-  opacity: 0;
   text-align: center;
+  display: none;
 }
 
-.preamble p:hover, .summary p:hover {
-  opacity: 1;
+.preamble:hover h3 {
+  display: none;
+}
+
+.preamble:hover p {
+  display: block;
 }
 
 .summary::before {
