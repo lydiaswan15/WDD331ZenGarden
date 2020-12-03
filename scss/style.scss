@@ -25,7 +25,7 @@ body{
 .page-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	// grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .page-wrapper {
@@ -304,8 +304,8 @@ a:hover{
 	margin: 1em;
 	height: 4em;
 	p{
-		display: none;
-		// opacity: 0%;
+		display: block;
+		opacity: 0%;
 	}
 
 	&:hover{
@@ -314,18 +314,29 @@ a:hover{
 		animation-fill-mode: forwards;
 		// height: auto;
 		p{
-			display: block
+			animation: increaseOpacity 1s;
+			animation-fill-mode: forwards
 		}
 	}
 }
 // keyframes for the animation where you hover over the sections and they increase in size. 
 @keyframes explanationsExpand{
 	0%{
-		height: 4em;
+		height: auto
 	}
 	100%{
+		height: auto;
 		background-color: yellow;
-		height: auto
+		opacity: 100%;
+	}
+}
+
+@keyframes increaseOpacity{
+	25%{
+		opacity: 0%;
+	}
+	100%{
+		opacity: 100%;
 	}
 }
 

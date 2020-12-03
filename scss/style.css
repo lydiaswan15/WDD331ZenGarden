@@ -14,8 +14,6 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .page-wrapper {
@@ -320,7 +318,8 @@ a:hover {
 }
 
 .supporting div p {
-  display: none;
+  display: block;
+  opacity: 0%;
 }
 
 .supporting div:hover {
@@ -331,26 +330,49 @@ a:hover {
 }
 
 .supporting div:hover p {
-  display: block;
+  -webkit-animation: increaseOpacity 1s;
+          animation: increaseOpacity 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes explanationsExpand {
   0% {
-    height: 4em;
+    height: auto;
   }
   100% {
-    background-color: yellow;
     height: auto;
+    background-color: yellow;
+    opacity: 100%;
   }
 }
 
 @keyframes explanationsExpand {
   0% {
-    height: 4em;
+    height: auto;
   }
   100% {
-    background-color: yellow;
     height: auto;
+    background-color: yellow;
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes increaseOpacity {
+  25% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes increaseOpacity {
+  25% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
