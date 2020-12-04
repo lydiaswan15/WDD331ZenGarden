@@ -169,33 +169,36 @@ $circleHeight: 495px;
 $circleWidth: 495px;
 .summary, .preamble{
 	background-color: #F09F2D;
-	margin: 0;
+	margin: auto;
 	width: $circleWidth;
 	height: $circleHeight;
 	text-align: center;
-	margin-top: auto; margin-bottom: auto;
+	margin-top: auto; 
+	margin-bottom: auto;
 	background: red;
 	border-radius: 50%;
 	grid-row: 2;
-	position: relative;
+	position: absolute;
 
+	//Pulsing Effect
 	transition: all .3s ease-in-out;
-	z-index: 1;
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-	transform: scale(1);
 	animation: pulse 2s infinite;
-}
-
-.summary {
-	&::before {
-		content: "Summary";
-		font-weight: bold;
-		font-size: 1.17em;
-		float: center;
-		line-height: 100%;
-		text-align: center;
+	@keyframes pulse {
+		0% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+		}
+		
+		70% {
+			transform: scale(1);
+			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		}
+		
+		100% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		}
 	}
-	grid-column: 1
 }
 
 .explanation {
@@ -214,10 +217,33 @@ $circleWidth: 495px;
 	margin: 50px;
 }
 
+.summary {
+	&::before {
+		content: "Summary";
+		font-weight: bold;
+		font-size: 3em;
+		line-height: 100%;
+		text-align: center;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(90%);
+		transform: translateX(-50%);
+	}
+	grid-column: 1
+}
+
 .preamble{
 	h3 {
+		font-size: 3em;
 		text-align: center;
 		padding-top: 100px;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-90%);
+		transform: translateY(-90%);
 	}
 	p {
 		text-align: center;
@@ -226,8 +252,6 @@ $circleWidth: 495px;
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row: 2;
-
-	
 }
 
 //Hover Effects
@@ -239,34 +263,15 @@ $circleWidth: 495px;
 		}
 		p{
 			display: block;
+			padding: 15px;
 		}
-		border-radius: 0;
-		// width: 1000px;
+		border-radius: 10%;
+		width: 1000px;
+		animation: none;
 	}
 	p {
 		text-align: center;
 		display: none;
-	}
-}
-
-//Pulsing Circles
-
-.preamble {  
-	@keyframes pulse {
-		0% {
-			transform: scale(0.95);
-			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-		}
-		
-		70% {
-			transform: scale(1);
-			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-		}
-		
-		100% {
-			transform: scale(0.95);
-			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-		}
 	}
 }
 
@@ -290,6 +295,7 @@ a:hover{
 
 // Sections
 .intro {
+	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 
