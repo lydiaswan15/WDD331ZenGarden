@@ -41,9 +41,9 @@ header {
 }
 
 header h1, header h2 {
-  animation: topToBottom 10s linear infinite;
-  -ms-animation: topToBottom 10s linear infinite;
-  -webkit-animation: topToBottom 10s linear infinite;
+  animation: topToBottom 7s linear infinite;
+  -ms-animation: topToBottom 7s linear infinite;
+  -webkit-animation: topToBottom 7s linear infinite;
   color: black;
   opacity: 0;
   overflow: hidden;
@@ -61,9 +61,9 @@ header h1 {
 }
 
 header h2 {
-  animation-delay: 5s;
-  -ms-animation-delay: 5s;
-  -webkit-animation-delay: 5s;
+  animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  -webkit-animation-delay: 4s;
   left: 28%;
   right: 28%;
 }
@@ -73,7 +73,7 @@ header h2 {
     opacity: 0;
   }
   5% {
-    opacity: 0;
+    opacity: 1;
     -moz-transform: translateY(-50px);
   }
   10% {
@@ -101,7 +101,7 @@ header h2 {
     opacity: 0;
   }
   5% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translateY(-50px);
   }
   10% {
@@ -208,20 +208,20 @@ header h2 {
   0% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 0 0 0 #D82C5D;
+            box-shadow: 0 0 0 0 #D82C5D;
   }
   70% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 10px #e46b8e;
+            box-shadow: 0 0 0 10px #e46b8e;
   }
   100% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 0 #f7d5df;
+            box-shadow: 0 0 0 0 #f7d5df;
   }
 }
 
@@ -229,20 +229,20 @@ header h2 {
   0% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 0 0 0 #D82C5D;
+            box-shadow: 0 0 0 0 #D82C5D;
   }
   70% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 10px #e46b8e;
+            box-shadow: 0 0 0 10px #e46b8e;
   }
   100% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 0 #f7d5df;
+            box-shadow: 0 0 0 0 #f7d5df;
   }
 }
 
@@ -256,7 +256,7 @@ header h2 {
   margin: 0;
   width: 495px;
   height: 495px;
-  background: red;
+  background: #F09F2D;
   border-radius: 50%;
   margin: 50px;
 }
@@ -274,7 +274,7 @@ header h2 {
   text-align: center;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translateY(90%);
           transform: translateY(90%);
   -webkit-transform: translateX(-50%);
@@ -282,9 +282,8 @@ header h2 {
 }
 
 .preamble {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 4;
+  -ms-grid-column: 2;
+  grid-column: 2;
   -ms-grid-row: 2;
   grid-row: 2;
 }
@@ -307,9 +306,12 @@ header h2 {
 
 .preamble:hover, .summary:hover {
   border-radius: 10%;
-  width: 1000px;
   -webkit-animation: none;
           animation: none;
+}
+
+.preamble:hover::before, .summary:hover::before {
+  content: none;
 }
 
 .preamble:hover h3, .summary:hover h3 {
@@ -319,6 +321,7 @@ header h2 {
 .preamble:hover p, .summary:hover p {
   display: block;
   padding: 15px;
+  padding-top: 50px;
 }
 
 .preamble p, .summary p {
@@ -347,8 +350,8 @@ a:hover {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 55% 50%;
+      grid-template-columns: 55% 50%;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
@@ -396,8 +399,8 @@ a:hover {
 }
 
 .supporting div:hover {
-  -webkit-animation: explanationsExpand 1s ease-in-out;
-          animation: explanationsExpand 1s ease-in-out;
+  -webkit-animation: explanationsExpand 1s;
+          animation: explanationsExpand 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: .5s;
