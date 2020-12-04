@@ -129,11 +129,13 @@ header h2{
 	}
 
 	.design-selection, .design-archives, .zen-resources{
-		display: none;
-		padding-left: 20px;
+		ul{
+			display: none;
+		}
+		padding-left: 75px;
 	}
 
-	.sidebar :hover{
+	.wrapper:hover{
 		// When hovering over the "Menu", the title of the names will appear. 
 		.wrapper{
 			right: -100px;
@@ -144,9 +146,14 @@ header h2{
 		animation-fill-mode: forwards; 
 	
 		.design-selection, .design-archives, .zen-resources{
-			display: block;
+			&:hover{
+				ul{
+					display: block;
+				}
+			}
 		}
 	}
+
 
 	// Animation for sliding the side bar
 
@@ -335,6 +342,7 @@ a:hover{
 		// height: auto;
 		animation: explanationsExpand 1s;
 		animation-fill-mode: forwards;
+		animation-delay: .5s; 
 		// height: auto;
 		p{
 			animation: increaseOpacity 1s;
@@ -355,7 +363,7 @@ a:hover{
 }
 
 @keyframes increaseOpacity{
-	25%{
+	75%{
 		opacity: 0%;
 	}
 	100%{

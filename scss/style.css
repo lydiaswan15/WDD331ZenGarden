@@ -139,24 +139,27 @@ header h2 {
 }
 
 .design-selection, .design-archives, .zen-resources {
-  display: none;
-  padding-left: 20px;
+  padding-left: 75px;
 }
 
-.sidebar :hover {
+.design-selection ul, .design-archives ul, .zen-resources ul {
+  display: none;
+}
+
+.wrapper:hover {
   -webkit-animation: sidebarSlide 1.5s;
           animation: sidebarSlide 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.sidebar :hover .wrapper {
+.wrapper:hover .wrapper {
   right: -100px;
   background-color: yellow;
   display: none;
 }
 
-.sidebar :hover .design-selection, .sidebar :hover .design-archives, .sidebar :hover .zen-resources {
+.wrapper:hover .design-selection:hover ul, .wrapper:hover .design-archives:hover ul, .wrapper:hover .zen-resources:hover ul {
   display: block;
 }
 
@@ -385,6 +388,8 @@ a:hover {
           animation: explanationsExpand 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
 
 .supporting div:hover p {
@@ -417,7 +422,7 @@ a:hover {
 }
 
 @-webkit-keyframes increaseOpacity {
-  25% {
+  75% {
     opacity: 0%;
   }
   100% {
@@ -426,7 +431,7 @@ a:hover {
 }
 
 @keyframes increaseOpacity {
-  25% {
+  75% {
     opacity: 0%;
   }
   100% {
