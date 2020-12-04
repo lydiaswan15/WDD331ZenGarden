@@ -36,10 +36,10 @@ body{
 
 
 
-//////////////////////////////////////////////////////////////////////
+
 //Title Animation
 //Dillon
-//////////////////////////////////////////////////////////////////////
+
 $headerOneSize: 50px;
 header {
     display: block;
@@ -111,40 +111,6 @@ header h2{
 	100% { opacity: 0; }
 }
 
-//////////////////////////////////////////////////////////////////////
-//Circles Section
-//Dillon
-//#F09F2D
-//////////////////////////////////////////////////////////////////////
-$circleHeight: 100px;
-.summary, .preamble{
-	background-color: #F09F2D;
-	margin: 0;
-	width: 100px;
-	height: $circleHeight;
-	line-height: 100px;
-	text-align: center;
-	margin-top: auto; margin-bottom: auto;
-	background: red;
-	border-radius: 50%;
-	grid-row: 2;
-	position: relative;
-}
-
-.summary {
-	grid-column: 1
-}
-
-.preamble {
-	grid-column: 2;
-}
-
-.explanation {
-	grid-column: 3;
-}
-
-
-
 // Side bar Menu thingamabob - opens on a hover. 
 // Adding the single word that will be used in the Menu. When hovered, the menu will appear. 
 
@@ -196,47 +162,77 @@ $circleHeight: 100px;
 
 
 
+//Circles Section
+//#F09F2D
+
+$circleHeight: 495px;
+$circleWidth: 495px;
+.summary, .preamble{
+	background-color: #F09F2D;
+	margin: 0;
+	width: $circleWidth;
+	height: $circleHeight;
+	text-align: center;
+	margin-top: auto; margin-bottom: auto;
+	background: red;
+	border-radius: 50%;
+	grid-row: 2;
+	position: relative;
+
+	transition: all .3s ease-in-out;
+	z-index: 1;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+.summary {
+	&::before {
+		content: "Summary";
+		font-weight: bold;
+		font-size: 1.17em;
+		float: center;
+		line-height: 100%;
+		text-align: center;
+	}
+	grid-column: 1
+}
+
+.explanation {
+	grid-column: 3;
+}
 
 
 // Summary and Preamble. 
 .summary, .preamble {
 	background-color: #F09F2D;
 	margin: 0;
-	width: 500px;
-	height: 500px;
+	width: $circleWidth;
+	height: $circleHeight;
 	background: red;
 	border-radius: 50%;
 	margin: 50px;
 }
 
-.summary {
-	// grid-column-start: 1;
-	// grid-column-end: 2;
-	// grid-row: 2;
-}
-
-.preamble {
+.preamble{
+	h3 {
+		text-align: center;
+		padding-top: 100px;
+	}
+	p {
+		text-align: center;
+		display: none;
+	}
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row: 2;
+
+	
 }
 
-.preamble h3 {
-	text-align: center;
-	padding-top: 100px;
-}
+//Hover Effects
 
-.preamble p, .summary p {
-	// opacity: 0;
-	text-align: center;
-	display: none;
-}
-
-// .preamble p:hover, .summary p:hover {
-// 	opacity: 1;
-// }
-
-.preamble{
+.preamble, .summary{
 	&:hover{
 		h3{
 			display: none;
@@ -244,17 +240,34 @@ $circleHeight: 100px;
 		p{
 			display: block;
 		}
+		border-radius: 0;
+		// width: 1000px;
+	}
+	p {
+		text-align: center;
+		display: none;
 	}
 }
 
-.summary::before {
-	content: "Summary";
-	font-weight: bold;
-	font-size: 1.17em;
-	float: center;
-	line-height: 100%;
-	text-align: center;
-	
+//Pulsing Circles
+
+.preamble {  
+	@keyframes pulse {
+		0% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+		}
+		
+		70% {
+			transform: scale(1);
+			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		}
+		
+		100% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		}
+	}
 }
 
 //just adding some styling to make the menu look prettier, FEEL FREE TO CHANGE :) -chloe
@@ -274,10 +287,8 @@ a:hover{
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }
-//////////////////////////////////////////////////////////////////////
-// Sections
-//////////////////////////////////////////////////////////////////////
 
+// Sections
 .intro {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
