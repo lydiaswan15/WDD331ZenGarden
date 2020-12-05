@@ -345,10 +345,11 @@ a:hover{
 	}
 
 	&:hover{
-		// height: auto;
+		height: auto;
 		animation: explanationsExpand 1s ease-in-out;
 		animation-fill-mode: forwards;
 		animation-delay: .5s; 
+		
 		// height: auto;
 		p{
 			animation: increaseOpacity 1s;
@@ -359,7 +360,7 @@ a:hover{
 // keyframes for the animation where you hover over the sections and they increase in size. 
 @keyframes explanationsExpand{
 	0%{
-		height: auto
+		height: auto;
 	}
 	100%{
 		height: auto;

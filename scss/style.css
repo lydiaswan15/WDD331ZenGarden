@@ -396,6 +396,7 @@ a:hover {
 }
 
 .supporting div:hover {
+  height: auto;
   -webkit-animation: explanationsExpand 1s ease-in-out;
           animation: explanationsExpand 1s ease-in-out;
   -webkit-animation-fill-mode: forwards;
