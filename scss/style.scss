@@ -72,12 +72,13 @@ header h1, header h2{
 	font-size: $headerOneSize;
 	margin: 0px; padding: 0px;
 	left: 120px;
-	top: 50vh;
+	top: 60vh;
+	padding-left: 10px;
+	border-left: solid 4px $hotPink;
 	// position: fixed;
 	// z-index: 0;
 
 }
-
 header h1{
 	animation-delay: 0s;
 	-ms-animation-delay: 0s;
@@ -122,7 +123,7 @@ header h2{
 // Side bar Menu thingamabob - opens on a hover. 
 // Adding the single word that will be used in the Menu. When hovered, the menu will appear. 
 	.wrapper{
-		position: absolute;
+		position: fixed;
 		top: 0px;
 		right: - $navWidth + 5vw;
 		padding-top: 1em;
@@ -131,6 +132,7 @@ header h2{
 		opacity: 90%;
 		display: flex;
 		flex-direction: column;
+		background-color: white;
 	}
 
 	.wrapper::before{
@@ -165,11 +167,11 @@ header h2{
 
 	@keyframes sidebarSlide{
 		25%{
-			background-color: red;
+			background-color: $hotPink;
 		}
 		100%{
 			transform: translateX(-20vw);
-			background-color: red;
+			background-color: $hotPink;
 		}
 	}
 
@@ -343,10 +345,11 @@ a:hover{
 //Drop down information
 #zen-supporting{
 	margin-top: 100vh;
+	margin-left: $totalPageMargin; margin-right: $totalPageMargin;
 }
 
 .supporting div{
-	border-top: 10px solid red;
+	border-top: 10px solid $lightBlue;
 	grid-column: 1/4;
 	margin-top: 6em;
 	height: 4em;
@@ -382,7 +385,7 @@ a:hover{
 	100%{
 		height: 20em;
 		padding: 2em;
-		background-color: yellow;
+		background-color: $orange;
 	}
 }
 
