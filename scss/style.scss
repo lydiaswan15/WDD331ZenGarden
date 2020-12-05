@@ -114,7 +114,6 @@ header h2{
 
 // Side bar Menu thingamabob - opens on a hover. 
 // Adding the single word that will be used in the Menu. When hovered, the menu will appear. 
-
 	.wrapper{
 		position: absolute;
 		top: 0px;
@@ -123,6 +122,8 @@ header h2{
 		height: 100vh;
 		width: 25vw;
 		opacity: 90%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.wrapper::before{
