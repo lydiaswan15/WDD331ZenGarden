@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 html {
   overflow-x: hidden;
-  margin: 8em;
 }
 
 body {
@@ -35,6 +34,7 @@ header {
   -ms-grid-row: 1;
   grid-row: 1;
   height: 100vh;
+  background-color: white;
 }
 
 header h1, header h2 {
@@ -49,8 +49,6 @@ header h1, header h2 {
   padding: 0px;
   left: 120px;
   top: 50vh;
-  position: fixed;
-  z-index: -1;
 }
 
 header h1 {
@@ -461,25 +459,5 @@ a:hover {
   100% {
     opacity: 100%;
   }
-}
-
-header::before {
-  content: '';
-  display: block;
-  border-left: 95vw solid transparent;
-  border-bottom: 35vh solid red;
-  position: absolute;
-  right: -25vw;
-  top: 50vh;
-}
-
-header::after {
-  content: '';
-  display: block;
-  border-right: 45vw solid transparent;
-  border-bottom: 35vh solid red;
-  position: absolute;
-  left: -25vw;
-  top: 50vh;
 }
 /*# sourceMappingURL=style.css.map */

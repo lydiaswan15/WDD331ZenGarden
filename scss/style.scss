@@ -12,12 +12,13 @@ $headerOneSize: 6em;
 $screenHeight: 100vh;
 
 // Colors
-
-
+$lightTan: #f7EFDE;
+$hotPink: #D82C5d;
+$lightBlue: #147BC5;
+$orange: #F09F2D;
 
 html{
 	overflow-x: hidden;
-	margin: $totalPageMargin;
 }
 @mixin mainParagraphs {
     // font-family: $headings;
@@ -59,6 +60,7 @@ header {
 	grid-column-end: 4;
 	grid-row: 1;
 	height: 100vh;
+	background-color: white;
 }
 
 header h1, header h2{
@@ -71,11 +73,10 @@ header h1, header h2{
 	margin: 0px; padding: 0px;
 	left: 120px;
 	top: 50vh;
-	position: fixed;
-	z-index: -1;
+	// position: fixed;
+	// z-index: 0;
 
 }
-
 
 header h1{
 	animation-delay: 0s;
@@ -398,24 +399,26 @@ a:hover{
 
 
 
-// OPTIONAL STYLE THINGS
-
-header::before{
-	content: '';
-	display: block;
-	border-left: 95vw solid transparent;
-	border-bottom: 35vh solid red;
-	position: absolute;
-	right: -25vw; top: 50vh;
-}
-
-header::after{
-	content: '';
-	display: block;
-    border-right: 45vw solid transparent;
-	border-bottom: 35vh solid red;
-	position: absolute;
-	left: -25vw; top: 50vh;
-}
+// // OPTIONAL STYLE THINGS
+// // Right Triangle
+// header::before{
+// 	content: '';
+// 	display: block;
+// 	border-left: 100vw solid transparent;
+// 	border-bottom: 35vh solid $hotPink;
+// 	position: absolute;
+// 	right: -25vw; top: 65vh;
+// 	z-index: 1;
+// }
+// // Left Triangle
+// header::after{
+// 	content: '';
+// 	display: block;
+//     border-right: 50vw solid transparent;
+// 	border-bottom: 35vh solid $hotPink;
+// 	position: absolute;
+// 	left: -25vw; top: 65vh;
+// 	z-index: 1;
+// }
 
 
