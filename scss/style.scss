@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 html{
 	overflow-x: hidden;
+	margin: 4em;
 }
 @mixin mainParagraphs {
     // font-family: $headings;
@@ -126,6 +127,7 @@ header h2{
 
 	.wrapper::before{
 		content: 'Menu';
+		font-size: 1.2em;
 	}
 
 	.design-selection, .design-archives, .zen-resources{
@@ -329,43 +331,56 @@ a:hover{
 }
 
 
+
+
+
+
+
+
 //Drop down information
 #zen-supporting{
 	margin-top: 100vh;
 }
 
 .supporting div{
+	border-top: 10px solid red;
 	grid-column: 1/4;
-	background-color: green;
 	margin: 1em;
+	margin-top: 6em;
 	height: 4em;
 	p{
-		display: block;
+		display: none;
 		opacity: 0%;
+		font-size: 1.2em;
+	}
+
+	h3{
+		font-size: 3em;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	&:hover{
-		height: auto;
 		animation: explanationsExpand 1s ease-in-out;
 		animation-fill-mode: forwards;
-		animation-delay: .5s; 
-		
-		// height: auto;
+		animation-delay: .2s; 
+	
 		p{
 			animation: increaseOpacity 1s;
-			animation-fill-mode: forwards
+			animation-fill-mode: forwards;
+			display: block;
 		}
 	}
 }
 // keyframes for the animation where you hover over the sections and they increase in size. 
 @keyframes explanationsExpand{
 	0%{
-		height: auto;
+		height: 4em;
 	}
 	100%{
-		height: auto;
+		height: 20em;
+		padding: 2em;
 		background-color: yellow;
-		opacity: 100%;
 	}
 }
 

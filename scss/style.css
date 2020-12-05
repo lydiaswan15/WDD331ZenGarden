@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 html {
   overflow-x: hidden;
+  margin: 4em;
 }
 
 body {
@@ -136,6 +137,7 @@ header h2 {
 
 .wrapper::before {
   content: 'Menu';
+  font-size: 1.2em;
 }
 
 .design-selection, .design-archives, .zen-resources {
@@ -382,27 +384,38 @@ a:hover {
 }
 
 .supporting div {
+  border-top: 10px solid red;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
-  background-color: green;
   margin: 1em;
+  margin-top: 6em;
   height: 4em;
 }
 
 .supporting div p {
-  display: block;
+  display: none;
   opacity: 0%;
+  font-size: 1.2em;
+}
+
+.supporting div h3 {
+  font-size: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .supporting div:hover {
-  height: auto;
   -webkit-animation: explanationsExpand 1s ease-in-out;
           animation: explanationsExpand 1s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
 }
 
 .supporting div:hover p {
@@ -410,27 +423,28 @@ a:hover {
           animation: increaseOpacity 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  display: block;
 }
 
 @-webkit-keyframes explanationsExpand {
   0% {
-    height: auto;
+    height: 4em;
   }
   100% {
-    height: auto;
+    height: 20em;
+    padding: 2em;
     background-color: yellow;
-    opacity: 100%;
   }
 }
 
 @keyframes explanationsExpand {
   0% {
-    height: auto;
+    height: 4em;
   }
   100% {
-    height: auto;
+    height: 20em;
+    padding: 2em;
     background-color: yellow;
-    opacity: 100%;
   }
 }
 
