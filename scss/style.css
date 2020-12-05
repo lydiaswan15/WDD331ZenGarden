@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 html {
   overflow-x: hidden;
-  margin: 4em;
+  margin: 8em;
 }
 
 body {
@@ -28,45 +28,42 @@ body {
 
 header {
   display: block;
-  background-color: #F7EFDE;
-  margin: auto;
+  margin: 0px;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
   -ms-grid-row: 1;
   grid-row: 1;
-  line-height: 100vh;
   height: 100vh;
-  text-align: center;
-  background-color: red;
 }
 
 header h1, header h2 {
-  animation: topToBottom 10s linear infinite;
-  -ms-animation: topToBottom 10s linear infinite;
   -webkit-animation: topToBottom 10s linear infinite;
+          animation: topToBottom 10s linear infinite;
   color: black;
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  font-size: 50px;
+  font-size: 6em;
   margin: 0px;
+  padding: 0px;
+  left: 120px;
+  top: 50vh;
+  position: fixed;
+  z-index: -1;
 }
 
 header h1 {
   animation-delay: 0s;
   -ms-animation-delay: 0s;
   -webkit-animation-delay: 0s;
-  left: 35%;
-  right: 35%;
 }
 
 header h2 {
   animation-delay: 5s;
   -ms-animation-delay: 5s;
   -webkit-animation-delay: 5s;
-  left: 28%;
-  right: 28%;
+  font-size: 4em;
 }
 
 @keyframes topToBottom {
@@ -144,7 +141,8 @@ header h2 {
 
 .wrapper::before {
   content: 'Menu';
-  font-size: 1.2em;
+  font-size: 1.2vw;
+  max-width: 1.2vw;
 }
 
 .design-selection, .design-archives, .zen-resources {
@@ -160,12 +158,6 @@ header h2 {
           animation: sidebarSlide 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-.wrapper:hover .wrapper {
-  right: -100px;
-  background-color: yellow;
-  display: none;
 }
 
 .wrapper:hover .design-selection:hover ul, .wrapper:hover .design-archives:hover ul, .wrapper:hover .zen-resources:hover ul {
@@ -373,7 +365,6 @@ a:hover {
   grid-column-end: 4;
   -ms-grid-row: 3;
   grid-row: 3;
-  margin: 50px;
 }
 
 .sidebar {
@@ -395,7 +386,6 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
-  margin: 1em;
   margin-top: 6em;
   height: 4em;
 }
@@ -471,5 +461,25 @@ a:hover {
   100% {
     opacity: 100%;
   }
+}
+
+header::before {
+  content: '';
+  display: block;
+  border-left: 95vw solid transparent;
+  border-bottom: 35vh solid red;
+  position: absolute;
+  right: -25vw;
+  top: 50vh;
+}
+
+header::after {
+  content: '';
+  display: block;
+  border-right: 45vw solid transparent;
+  border-bottom: 35vh solid red;
+  position: absolute;
+  left: -25vw;
+  top: 50vh;
 }
 /*# sourceMappingURL=style.css.map */

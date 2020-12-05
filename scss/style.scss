@@ -4,9 +4,21 @@
 // @use 'organisms' as o;
 // @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+// Variables //
+$totalPageMargin: 8em;
+$navWidth: 25vw;
+$menuTextWidth: 1.2vw;
+$headerOneSize: 6em;
+$screenHeight: 100vh;
+
+// Colors
+
+$
+
+
 html{
 	overflow-x: hidden;
-	margin: 4em;
+	margin: $totalPageMargin;
 }
 @mixin mainParagraphs {
     // font-family: $headings;
@@ -41,30 +53,28 @@ body{
 //Title Animation
 //Dillon
 
-$headerOneSize: 50px;
 header {
     display: block;
-	background-color: #F7EFDE;
-	margin: auto;
+	margin: 0px;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row: 1;
-	line-height: 100vh;
 	height: 100vh;
-	text-align: center;
-	background-color: red;
 }
 
 header h1, header h2{
 	animation: topToBottom 10s linear infinite;
-	-ms-animation: topToBottom 10s linear infinite;
-	-webkit-animation: topToBottom 10s linear infinite;
 	color: black;
 	opacity: 0;
 	overflow: hidden;
     position: absolute;
 	font-size: $headerOneSize;
-	margin: 0px;
+	margin: 0px; padding: 0px;
+	left: 120px;
+	top: 50vh;
+	position: fixed;
+	z-index: -1;
+
 }
 
 
@@ -72,16 +82,13 @@ header h1{
 	animation-delay: 0s;
 	-ms-animation-delay: 0s;
     -webkit-animation-delay: 0s;
-    left: 35%;
-    right: 35%;
 }
 
 header h2{
 	animation-delay: 5s;
 	-ms-animation-delay: 5s;
-    -webkit-animation-delay: 5s;
-    left: 28%;
-    right: 28%;
+	-webkit-animation-delay: 5s;
+	font-size: $headerOneSize - 2em;
 }
 
 @keyframes topToBottom{
@@ -117,10 +124,10 @@ header h2{
 	.wrapper{
 		position: absolute;
 		top: 0px;
-		right: -20vw;
+		right: - $navWidth + 5vw;
 		padding-top: 1em;
 		height: 100vh;
-		width: 25vw;
+		width: $navWidth;
 		opacity: 90%;
 		display: flex;
 		flex-direction: column;
@@ -128,7 +135,8 @@ header h2{
 
 	.wrapper::before{
 		content: 'Menu';
-		font-size: 1.2em;
+		font-size: $menuTextWidth;
+		max-width: $menuTextWidth;
 	}
 
 	.design-selection, .design-archives, .zen-resources{
@@ -140,11 +148,6 @@ header h2{
 
 	.wrapper:hover{
 		// When hovering over the "Menu", the title of the names will appear. 
-		.wrapper{
-			right: -100px;
-			background-color: yellow;
-			display: none;
-		}
 		animation: sidebarSlide 1.5s;
 		animation-fill-mode: forwards; 
 	
@@ -320,7 +323,6 @@ a:hover{
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row: 3;
-	margin: 50px;
 }
 
 .sidebar {
@@ -346,7 +348,6 @@ a:hover{
 .supporting div{
 	border-top: 10px solid red;
 	grid-column: 1/4;
-	margin: 1em;
 	margin-top: 6em;
 	height: 4em;
 	p{
@@ -392,6 +393,30 @@ a:hover{
 	100%{
 		opacity: 100%;
 	}
+}
+
+
+
+
+
+// OPTIONAL STYLE THINGS
+
+header::before{
+	content: '';
+	display: block;
+	border-left: 95vw solid transparent;
+	border-bottom: 35vh solid red;
+	position: absolute;
+	right: -25vw; top: 50vh;
+}
+
+header::after{
+	content: '';
+	display: block;
+    border-right: 45vw solid transparent;
+	border-bottom: 35vh solid red;
+	position: absolute;
+	left: -25vw; top: 50vh;
 }
 
 
