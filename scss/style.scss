@@ -10,6 +10,8 @@ $navWidth: 25vw;
 $menuTextWidth: 1.2vw;
 $headerOneSize: 6em;
 $screenHeight: 100vh;
+$footerWidth: 1200px;
+$footerHeight:100px;
 
 // Colors
 $lightTan: #f7EFDE;
@@ -291,7 +293,6 @@ $circleWidth: 495px;
 }
 
 //just adding some styling to make the menu look prettier, FEEL FREE TO CHANGE :) -chloe
-// also none of this is working in scss so i just put it at the bottom in the CSS file </3
 ul{
 	list-style: none;
 }
@@ -306,6 +307,23 @@ a:hover{
     letter-spacing: 0.5px;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
+}
+
+footer{
+	background-color: #D82C5d;
+	font-size: 24px;
+	width: $footerWidth;
+	// height: $footerHeight;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 2em;
+	
+}
+
+footer a:hover{
+	font-size:40px;
+	transition: background-color 2s ease-out;
 }
 
 // Sections
