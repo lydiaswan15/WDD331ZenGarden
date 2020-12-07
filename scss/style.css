@@ -353,6 +353,26 @@ a:hover {
   -webkit-transition: all .4s ease;
 }
 
+footer {
+  background-color: #D82C5d;
+  font-size: 24px;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2em;
+}
+
+footer a:hover {
+  font-size: 40px;
+}
+
 .intro {
   position: relative;
   display: -ms-grid;
