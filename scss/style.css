@@ -148,8 +148,6 @@ header h2 {
 .sidebar::before {
   content: '';
   display: block;
-  position: fixed;
-  background-color: yellow;
   width: 100vw;
   height: 100vh;
 }
@@ -371,6 +369,8 @@ footer {
 
 footer a:hover {
   font-size: 40px;
+  -webkit-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 }
 
 .intro {
