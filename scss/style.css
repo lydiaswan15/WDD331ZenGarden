@@ -137,13 +137,21 @@ header h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: white;
 }
 
 .wrapper::before {
   content: 'Menu';
   font-size: 1.2vw;
   max-width: 1.2vw;
+}
+
+.sidebar::before {
+  content: '';
+  display: block;
+  position: fixed;
+  background-color: yellow;
+  width: 100vw;
+  height: 100vh;
 }
 
 .design-selection, .design-archives, .zen-resources {
