@@ -38,8 +38,8 @@ header {
 }
 
 header h1, header h2 {
-  -webkit-animation: topToBottom 10s linear infinite;
-          animation: topToBottom 10s linear infinite;
+  -webkit-animation: topToBottom 6s linear infinite;
+          animation: topToBottom 6s linear infinite;
   color: black;
   opacity: 0;
   overflow: hidden;
@@ -60,9 +60,9 @@ header h1 {
 }
 
 header h2 {
-  animation-delay: 5s;
-  -ms-animation-delay: 5s;
-  -webkit-animation-delay: 5s;
+  animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
   font-size: 4em;
 }
 
@@ -71,7 +71,7 @@ header h2 {
     opacity: 0;
   }
   5% {
-    opacity: 0;
+    opacity: 1;
     -moz-transform: translateY(-50px);
   }
   10% {
@@ -99,7 +99,7 @@ header h2 {
     opacity: 0;
   }
   5% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translateY(-50px);
   }
   10% {
@@ -201,7 +201,7 @@ header h2 {
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-  background: red;
+  background: #F09F2D;
   border-radius: 50%;
   -ms-grid-row: 2;
   grid-row: 2;
