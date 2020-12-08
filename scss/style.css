@@ -382,6 +382,8 @@ footer a:hover {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
+  padding-left: 50px;
+  padding-right: 200px;
 }
 
 .main {
