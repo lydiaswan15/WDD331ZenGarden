@@ -10,7 +10,7 @@ $navWidth: 25vw;
 $menuTextWidth: 1.2vw;
 $headerOneSize: 6em;
 $screenHeight: 100vh;
-$footerWidth: 1200px;
+$footerWidth: 1100px;
 $footerHeight:100px;
 
 // Colors
@@ -316,7 +316,7 @@ a:hover{
 }
 
 footer{
-	background-color: #D82C5d;
+	background-color:$hotPink;
 	font-size: 24px;
 	width: $footerWidth;
 	// height: $footerHeight;
@@ -324,6 +324,7 @@ footer{
 	flex-direction: row;
 	justify-content: space-around;
 	padding: 2em;
+	margin-top: 200px;
 	
 }
 

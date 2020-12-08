@@ -354,7 +354,7 @@ a:hover {
 footer {
   background-color: #D82C5d;
   font-size: 24px;
-  width: 1200px;
+  width: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,6 +365,7 @@ footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 2em;
+  margin-top: 200px;
 }
 
 footer a:hover {
