@@ -303,6 +303,7 @@ $circleWidth: 495px;
 //just adding some styling to make the menu look prettier, FEEL FREE TO CHANGE :) -chloe
 ul{
 	list-style: none;
+	// transition: all .2s ease-in-out;
 }
 
 a{
@@ -314,11 +315,14 @@ a:hover{
 	font-weight: 700;
     font-size: 20px;
 	letter-spacing: 0.5px;
-	// transition-timing-function: linear;
-    // transition: all .4s ease-in-out;
-	// -webkit-transition: all .4s ease-in-out;
-	// transition: all .4s ease-out;
-	// -webkit-transition: all .4s ease-out;
+}
+
+.sidebar h3 {
+	transition: all .2s ease-in-out;
+}
+
+.sidebar h3:hover {
+	color: $lightTan;
 }
 
 footer{
@@ -370,6 +374,7 @@ footer a:hover{
 
 	grid-column-start: 1;
 	grid-column-end: 4;
+	
 }
 
 
