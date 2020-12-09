@@ -349,8 +349,10 @@ a:hover {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.5px;
-  transition: all .4s ease;
-  -webkit-transition: all .4s ease;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
 }
 
 footer {
