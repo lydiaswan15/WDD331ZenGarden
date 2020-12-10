@@ -429,16 +429,7 @@ footer a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
-  margin-top: 6em;
-  height: 4em;
-  -webkit-transform: all 3s ease-in-out;
-          transform: all 3s ease-in-out;
-}
-
-.supporting div p {
-  display: none;
-  opacity: 0%;
-  font-size: 1.2em;
+  height: auto;
 }
 
 .supporting div h3 {
@@ -449,19 +440,6 @@ footer a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.supporting div:hover {
-  -webkit-transition: height 1s 500px;
-  transition: height 1s 500px;
-}
-
-.supporting div:hover p {
-  -webkit-animation: increaseOpacity 1s;
-          animation: increaseOpacity 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  display: block;
 }
 
 @-webkit-keyframes explanationsExpand {
