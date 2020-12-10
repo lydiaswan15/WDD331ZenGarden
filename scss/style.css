@@ -123,6 +123,8 @@ header h2 {
 }
 
 .wrapper {
+  -webkit-transition: all 0.35 ease-in-out;
+  transition: all 0.35 ease-in-out;
   position: fixed;
   top: 0px;
   right: -20vw;
@@ -289,6 +291,10 @@ header h2 {
           transform: translateX(-50%);
 }
 
+.summary p {
+  margin-top: 120px;
+}
+
 .preamble {
   -ms-grid-column: 2;
       grid-column-start: 2;
@@ -310,6 +316,7 @@ header h2 {
 .preamble p {
   text-align: center;
   display: none;
+  margin-top: 50px;
 }
 
 .preamble:hover, .summary:hover {

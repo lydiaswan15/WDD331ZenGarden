@@ -125,6 +125,7 @@ header h2{
 // Side bar Menu thingamabob - opens on a hover. 
 // Adding the single word that will be used in the Menu. When hovered, the menu will appear. 
 	.wrapper{
+		transition: all 0.35 ease-in-out;
 		position: fixed;
 		top: 0px;
 		right: - $navWidth + 5vw;
@@ -254,6 +255,9 @@ $circleWidth: 495px;
 		transform: translateY(90%);
 		transform: translateX(-50%);
 	}
+	p {
+		margin-top: 120px;
+	}
 	grid-column: 1
 }
 
@@ -271,6 +275,7 @@ $circleWidth: 495px;
 	p {
 		text-align: center;
 		display: none;
+		margin-top: 50px;
 	}
 	grid-column-start: 2;
 	grid-row: 2;
