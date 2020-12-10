@@ -395,6 +395,7 @@ footer a:hover{
 	grid-column: 1/4;
 	margin-top: 6em;
 	height: 4em;
+	transform: all 3s ease-in-out;
 	p{
 		display: none;
 		opacity: 0%;
@@ -408,10 +409,10 @@ footer a:hover{
 	}
 
 	&:hover{
-		animation: explanationsExpand 1s ease-in-out;
-		animation-fill-mode: forwards;
-		animation-delay: .2s; 
-	
+		// animation: explanationsExpand 1s ease-in-out;
+		// animation-fill-mode: forwards;
+		// animation-delay: .2s; 
+		transition: height 1s 500px;
 		p{
 			animation: increaseOpacity 1s;
 			animation-fill-mode: forwards;
@@ -423,6 +424,7 @@ footer a:hover{
 @keyframes explanationsExpand{
 	0%{
 		height: 4em;
+		transform: translateX(500);
 	}
 	100%{
 		height: 20em;
