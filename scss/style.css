@@ -439,6 +439,13 @@ footer a:hover {
   height: auto;
 }
 
+.supporting div p {
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  height: 0px;
+  overflow: hidden;
+}
+
 .supporting div h3 {
   font-size: 3em;
   display: -webkit-box;
@@ -447,6 +454,14 @@ footer a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.supporting div:hover p {
+  height: 100vh;
+}
+
+.supporting div:hover:first-child {
+  background-color: yellow;
 }
 
 @-webkit-keyframes explanationsExpand {

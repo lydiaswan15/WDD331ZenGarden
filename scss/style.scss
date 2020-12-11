@@ -405,6 +405,9 @@ footer a:hover{
 	height: auto;
 	
 	p{
+		transition: height .5s;
+		height: 0px;
+		overflow: hidden;
 		// display: flex;
 		// flex-direction: column;
 		// transition: flex 0.3s ease-out;
@@ -432,6 +435,8 @@ footer a:hover{
 		// transition: height 1s 500px;
 		// height: auto;
 		p{
+			height: 100vh;
+
 			// max-height: auto;
 			// animation: increaseOpacity 1s;
 			// max-height: 1000px;
@@ -440,6 +445,9 @@ footer a:hover{
 			// display: block;
 			// max-height: 100%;
 			// transform: scaleY(1);
+		}
+		&:first-child{
+			background-color: yellow;
 		}
 	}
 }
