@@ -538,21 +538,41 @@ footer a:hover{
 }
 
 .preamble{
-	padding: 70px;
 	padding: 100px;
+	padding-top: 0px;
+	margin-top: 100px;
+	height: 45vh;
+	overflow: hidden;
+	transition: height .3s ease-in-out;
 	h3{
 		// display: flex;
+		transition: height .5s ease-in-out;
+		height: 300px;
 		text-align: right;
 		font-size: $headerOneSize;
 		padding-left: 40%;
-		padding-right: 100px;
+		padding-right: 70px;
 		&::after{
 			content: '↓';
 			display: block;
 			font-size: .8em;
 			transform: scaleY(1.5);
-			padding-top: 30px;
 			height: 20px;
+		}
+	}
+	p{
+		text-align: right;
+		padding-right: 100px;
+	}
+
+
+	&:hover{
+		height: 100vh;
+		transition: background-color 3s ease-in-out;
+		background-color: $hotPink;
+		h3{
+			height: 0px;
+			overflow: hidden;
 		}
 	}
 }
