@@ -493,29 +493,28 @@ footer a:hover {
 .preamble p {
   text-align: right;
   padding-right: 100px;
+  padding: 0px;
+  padding-right: 25%;
+  text-align: left;
+  font-size: 2em;
 }
 
 .preamble:hover {
-  -webkit-transition: background-color 1s ease-in-out;
-  transition: background-color 1s ease-in-out;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
   background-color: #147BC5;
+  transition-delay: .5s;
+  height: 100vh;
 }
 
 .preamble:hover h3 {
   -webkit-transition: height .3s ease-in-out;
   transition: height .3s ease-in-out;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
   height: 0px;
   overflow: hidden;
-}
-
-.preamble:hover p {
-  padding: 0px;
-  padding-right: 25%;
-  text-align: left;
-  font-size: 2em;
 }
 /*# sourceMappingURL=style.css.map */
