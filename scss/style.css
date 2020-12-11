@@ -122,9 +122,27 @@ header h2 {
   }
 }
 
+@-webkit-keyframes navigationColoring {
+  0% {
+    background-color: white;
+    opacity: 100%;
+  }
+  to {
+    background-color: #D82C5d;
+  }
+}
+
+@keyframes navigationColoring {
+  0% {
+    background-color: white;
+    opacity: 100%;
+  }
+  to {
+    background-color: #D82C5d;
+  }
+}
+
 .wrapper {
-  -webkit-transition: all 0.35 ease-in-out;
-  transition: all 0.35 ease-in-out;
   position: fixed;
   top: 0px;
   right: -20vw;
@@ -132,6 +150,8 @@ header h2 {
   height: 100vh;
   width: 25vw;
   opacity: 90%;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,6 +159,40 @@ header h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.wrapper .design-selection, .wrapper .design-archives, .wrapper .zen-resources {
+  padding-left: 75px;
+  height: 50px;
+  overflow: hidden;
+  -webkit-transition: height .5s ease-in-out;
+  transition: height .5s ease-in-out;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.wrapper .design-selection:hover {
+  height: 260px;
+}
+
+.wrapper .design-archives:hover {
+  height: 100px;
+}
+
+.wrapper .zen-resources:hover {
+  height: 260px;
+}
+
+.wrapper:hover {
+  -webkit-transform: translateX(-20vw);
+          transform: translateX(-20vw);
+  background-color: #D82C5d;
+}
+
+.wrapper:hover::before {
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  opacity: 0%;
 }
 
 .wrapper::before {
@@ -152,25 +206,6 @@ header h2 {
   display: block;
   width: 100vw;
   height: 100vh;
-}
-
-.design-selection, .design-archives, .zen-resources {
-  padding-left: 75px;
-}
-
-.design-selection ul, .design-archives ul, .zen-resources ul {
-  display: none;
-}
-
-.wrapper:hover {
-  -webkit-animation: sidebarSlide 1.5s;
-          animation: sidebarSlide 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.wrapper:hover .design-selection:hover ul, .wrapper:hover .design-archives:hover ul, .wrapper:hover .zen-resources:hover ul {
-  display: block;
 }
 
 @-webkit-keyframes sidebarSlide {
@@ -467,7 +502,7 @@ footer a:hover {
 
 .supporting .explanation:hover {
   background-color: #F09F2D;
-  height: 300px;
+  height: 330px;
   -webkit-animation: orangeBackground .5s;
           animation: orangeBackground .5s;
   -webkit-animation-fill-mode: forwards;
@@ -477,6 +512,52 @@ footer a:hover {
 .supporting .explanation:hover p, .supporting .explanation:hover h3 {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
+  margin-right: 60px;
+}
+
+.supporting .participation:hover {
+  background-color: #F09F2D;
+  height: 350px;
+  -webkit-animation: orangeBackground .5s;
+          animation: orangeBackground .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.supporting .participation:hover p, .supporting .participation:hover h3 {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  margin-right: 60px;
+}
+
+.supporting .benefits:hover {
+  background-color: #F09F2D;
+  height: 250px;
+  -webkit-animation: orangeBackground .5s;
+          animation: orangeBackground .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.supporting .benefits:hover p, .supporting .benefits:hover h3 {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  margin-right: 60px;
+}
+
+.supporting .requirements:hover {
+  background-color: #F09F2D;
+  height: 500px;
+  -webkit-animation: orangeBackground .5s;
+          animation: orangeBackground .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.supporting .requirements:hover p, .supporting .requirements:hover h3 {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  margin-right: 60px;
 }
 
 @-webkit-keyframes orangeBackground {
