@@ -461,21 +461,24 @@ footer a:hover {
 .preamble {
   padding: 100px;
   padding-top: 0px;
-  margin-top: 100px;
-  height: 45vh;
+  height: 60vh;
   overflow: hidden;
   -webkit-transition: height .3s ease-in-out;
   transition: height .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .preamble h3 {
-  -webkit-transition: height .5s ease-in-out;
-  transition: height .5s ease-in-out;
-  height: 300px;
+  -webkit-transition: height .3s ease-in-out;
+  transition: height .3s ease-in-out;
+  height: 350px;
   text-align: right;
   font-size: 6em;
   padding-left: 40%;
   padding-right: 70px;
+  padding-top: 100px;
+  overflow: hidden;
 }
 
 .preamble h3::after {
@@ -493,14 +496,26 @@ footer a:hover {
 }
 
 .preamble:hover {
-  height: 100vh;
-  -webkit-transition: background-color 3s ease-in-out;
-  transition: background-color 3s ease-in-out;
-  background-color: #D82C5d;
+  -webkit-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  background-color: #147BC5;
 }
 
 .preamble:hover h3 {
+  -webkit-transition: height .3s ease-in-out;
+  transition: height .3s ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
   height: 0px;
   overflow: hidden;
+}
+
+.preamble:hover p {
+  padding: 0px;
+  padding-right: 25%;
+  text-align: left;
+  font-size: 2em;
 }
 /*# sourceMappingURL=style.css.map */
