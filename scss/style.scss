@@ -541,8 +541,11 @@ footer a:hover{
 	padding: 70px;
 	padding: 100px;
 	h3{
+		// display: flex;
+		text-align: right;
 		font-size: $headerOneSize;
-		padding-right: 50%;
+		padding-left: 40%;
+		padding-right: 100px;
 		&::after{
 			content: '↓';
 			display: block;
