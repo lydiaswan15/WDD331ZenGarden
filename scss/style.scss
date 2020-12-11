@@ -395,81 +395,57 @@ footer a:hover{
 	margin-left: $totalPageMargin; margin-right: $totalPageMargin;
 }
 
-.supporting div{
-	border-top: 10px solid $lightBlue;
-	grid-column: 1/4;
-	// margin-top: 6em;
-	// max-height: 1000px; 
-	// max-height: 1000px;
-	// height: auto;
-	height: auto;
-	
-	p{
-		transition: height .5s;
-		height: 0px;
-		overflow: hidden;
-		// display: flex;
-		// flex-direction: column;
-		// transition: flex 0.3s ease-out;
-		// display: block;
-		// opacity: 100%;
-		// font-size: 1.2em;
-		// // max-height: 1000px;
-		// // height: auto;
-		// transition: max-height 3s ease-in-out;
-		// transform: scaleY(0);
-		// max-height: 0px;
-		// height: auto;
-	}
+.supporting{
 
+	div{
+		border-top: 10px solid $lightBlue;
+		grid-column: 1/4;
+		height: 130px;
+		transition: height .5s;
+		overflow: hidden;
+		margin-top: 2em; padding-bottom: 20px;
+	}
 	h3{
 		font-size: 3em;
 		display: flex;
 		justify-content: space-between;
 	}
-
-	&:hover{
-		// animation: explanationsExpand 1s ease-in-out;
-		// animation-fill-mode: forwards;
-		// animation-delay: .2s; 
-		// transition: height 1s 500px;
-		// height: auto;
-		p{
-			height: 100vh;
-
-			// max-height: auto;
-			// animation: increaseOpacity 1s;
-			// max-height: 1000px;
-			// height: auto;
-			// animation-fill-mode: forwards;
-			// display: block;
-			// max-height: 100%;
-			// transform: scaleY(1);
-		}
-		&:first-child{
-			background-color: yellow;
+	p{
+		height: auto;
+	}
+	p, h3{
+		transition: transform .5s ease-in-out;
+	}
+	@mixin dropDownStyling ($height){
+		background-color: $orange;
+		height: $height;
+		animation: orangeBackground .5s;
+		animation-fill-mode: forwards;
+		p, h3{
+			transform: translateX(30px);
 		}
 	}
+	.explanation:hover{
+		$height: 300px;
+		@include dropDownStyling($height);
+	}
+	
 }
+
 // keyframes for the animation where you hover over the sections and they increase in size. 
-@keyframes explanationsExpand{
+
+@keyframes orangeBackground{
 	0%{
-		height: 4em;
-		transform: translateX(500);
+		background-color: white;
 	}
 	100%{
-		height: 20em;
-		padding: 2em;
 		background-color: $orange;
 	}
 }
 
-@keyframes increaseOpacity{
-	75%{
-		opacity: 0%;
-	}
+@keyframes transitionToRight{
 	100%{
-		opacity: 100%;
+		transform: translateX(30px);
 	}
 }
 
