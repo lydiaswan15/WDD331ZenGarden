@@ -175,13 +175,6 @@ header h2{
 				transition: opacity .5s ease-in-out;
 				opacity: 0%;
 			}
-			// .design-selection, .design-archives, .zen-resources{
-			// 	&:hover{
-			// 		ul{
-			// 			display: block;
-			// 		}
-			// 	}
-			// }
 		}
 	}
 
@@ -190,11 +183,11 @@ header h2{
 		font-size: $menuTextWidth;
 		max-width: $menuTextWidth;
 	}
-	.sidebar::before{
-		content: '';
-		display: block;
-		width: 100vw; height: 100vh;
-	}
+	// .sidebar::before{
+	// 	content: '';
+	// 	display: block;
+	// 	width: 100vw; height: 100vh;
+	// }
 	
 
 
@@ -375,17 +368,7 @@ footer a:hover{
 }
 
 
-// Sections
-// .intro {
-// 	position: relative;
-// 	display: grid;
-// 	grid-template-columns: 1fr 1fr;
 
-// 	grid-column-start: 1;
-// 	grid-column-end: 4;
-// 	padding-left: 50px;
-// 	padding-right: 200px;
-// }
 
 .main {
 	display: grid;
@@ -406,20 +389,14 @@ footer a:hover{
 }
 
 
-
-
-
-
-
-
 //Drop down information
 #zen-supporting{
-	margin-top: 100vh;
+	margin-top: 0px;
 	margin-left: $totalPageMargin; margin-right: $totalPageMargin;
 }
 
 .supporting{
-
+	padding-top: 20em;
 	div{
 		border-top: 10px solid $lightBlue;
 		grid-column: 1/4;
@@ -542,11 +519,11 @@ footer a:hover{
 	padding-top: 0px;
 	height: 60vh;
 	overflow: hidden;
-	transition: height .3s ease-in-out;
 	transition: all .3s ease-in-out;
 	h3{
-		transition: height .3s ease-in-out;
-		height: 350px;
+		line-height: 1.2em;
+		transition: all .3s ease-in-out;
+		height: 360px;
 		text-align: right;
 		font-size: $headerOneSize;
 		padding-left: 40%;
@@ -559,6 +536,7 @@ footer a:hover{
 			font-size: .8em;
 			transform: scaleY(1.5);
 			height: 20px;
+			color: $hotPink;
 		}
 	}
 	p{
@@ -567,6 +545,7 @@ footer a:hover{
 		padding:0px; padding-right: 25%;
 		text-align: left;
 		font-size: 2em;
+		line-height: 1.2em;
 	}
 
 
@@ -576,12 +555,15 @@ footer a:hover{
 		background-color: $lightBlue;
 		transition-delay: .5s;
 		height: 100vh;
-		
 		h3{
-			transition: height .3s ease-in-out;
+			line-height: 1.2em;
+			transition: all .3s ease-in-out;
 			transition-delay: .5s;
 			height: 0px;
 			overflow: hidden;
+			padding: 0px; margin: 0px;
+			padding-top: 150px;
+
 		}
 	}
 }

@@ -200,13 +200,6 @@ header h2 {
   max-width: 1.2vw;
 }
 
-.sidebar::before {
-  content: '';
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-
 @-webkit-keyframes sidebarSlide {
   25% {
     background-color: #D82C5d;
@@ -299,9 +292,13 @@ footer a:hover {
 }
 
 #zen-supporting {
-  margin-top: 100vh;
+  margin-top: 0px;
   margin-left: 8em;
   margin-right: 8em;
+}
+
+.supporting {
+  padding-top: 20em;
 }
 
 .supporting div {
@@ -463,16 +460,15 @@ footer a:hover {
   padding-top: 0px;
   height: 60vh;
   overflow: hidden;
-  -webkit-transition: height .3s ease-in-out;
-  transition: height .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 .preamble h3 {
-  -webkit-transition: height .3s ease-in-out;
-  transition: height .3s ease-in-out;
-  height: 350px;
+  line-height: 1.2em;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  height: 360px;
   text-align: right;
   font-size: 6em;
   padding-left: 40%;
@@ -488,6 +484,7 @@ footer a:hover {
   -webkit-transform: scaleY(1.5);
           transform: scaleY(1.5);
   height: 20px;
+  color: #D82C5d;
 }
 
 .preamble p {
@@ -497,6 +494,7 @@ footer a:hover {
   padding-right: 25%;
   text-align: left;
   font-size: 2em;
+  line-height: 1.2em;
 }
 
 .preamble:hover {
@@ -510,11 +508,15 @@ footer a:hover {
 }
 
 .preamble:hover h3 {
-  -webkit-transition: height .3s ease-in-out;
-  transition: height .3s ease-in-out;
+  line-height: 1.2em;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   -webkit-transition-delay: .5s;
           transition-delay: .5s;
   height: 0px;
   overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 150px;
 }
 /*# sourceMappingURL=style.css.map */
