@@ -1,23 +1,8 @@
-// @import 'atoms';
-// @use 'atoms'; 
-// @use 'molecules';
-// @use 'organisms' as o;
-// @import 'variables';
+@import 'variables';
+@use 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-// Variables //
-$totalPageMargin: 100px;
-$navWidth: 25vw;
-$menuTextWidth: 1.2vw;
-$headerOneSize: 6em;
-$screenHeight: 100vh;
-$footerWidth: 1100px;
-$footerHeight:100px;
 
-// Colors
-$lightTan: #f7EFDE;
-$hotPink: #D82C5d;
-$lightBlue: #147BC5;
-$orange: #F09F2D;
+
 
 html{
 	overflow-x: hidden;
