@@ -5,7 +5,7 @@
 // @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 // Variables //
-$totalPageMargin: 8em;
+$totalPageMargin: 100px;
 $navWidth: 25vw;
 $menuTextWidth: 1.2vw;
 $headerOneSize: 6em;
@@ -352,8 +352,8 @@ a:hover{
 footer{
 	background-color:$hotPink;
 	font-size: 24px;
-	width: $footerWidth;
-	// height: $footerHeight;
+	width: 100vw;
+	margin-left: 0px;
 	display:flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -390,14 +390,10 @@ footer a:hover{
 
 
 //Drop down information
-#zen-supporting{
-	margin-top: 0px;
-	margin-left: $totalPageMargin; margin-right: $totalPageMargin;
-}
 
 .supporting{
-	padding-top: 20em;
-	div{
+	padding-top: 15em;
+	div{	
 		border-top: 10px solid $lightBlue;
 		grid-column: 1/4;
 		height: 130px;
@@ -425,6 +421,10 @@ footer a:hover{
 			transform: translateX(30px);
 			margin-right: 60px;
 		}
+	}
+	.explanation, .participation, .benefits, .requirements{
+		margin-left: $totalPageMargin;
+		margin-right: $totalPageMargin +$totalPageMargin;
 	}
 	.explanation:hover{
 		$height: 330px;

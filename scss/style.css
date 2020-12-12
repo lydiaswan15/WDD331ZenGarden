@@ -251,7 +251,8 @@ a:hover {
 footer {
   background-color: #D82C5d;
   font-size: 24px;
-  width: 1100px;
+  width: 100vw;
+  margin-left: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,14 +292,8 @@ footer a:hover {
   grid-column-end: 4;
 }
 
-#zen-supporting {
-  margin-top: 0px;
-  margin-left: 8em;
-  margin-right: 8em;
-}
-
 .supporting {
-  padding-top: 20em;
+  padding-top: 15em;
 }
 
 .supporting div {
@@ -333,6 +328,11 @@ footer a:hover {
   transition: -webkit-transform .5s ease-in-out;
   transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.supporting .explanation, .supporting .participation, .supporting .benefits, .supporting .requirements {
+  margin-left: 100px;
+  margin-right: 200px;
 }
 
 .supporting .explanation:hover {
