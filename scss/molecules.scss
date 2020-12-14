@@ -48,13 +48,24 @@ footer{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 2em;
+    padding: 48px 48px 0 48px;
     margin-top: 200px;   
 }
 
-footer a.zen-validate-html{
-    width: 75px; height: 75px;
-    background: url('485-html-five.svg') no-repeat;
+
+//Footer icons
+footer a::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+footer a.zen-validate-html::before{
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    content: "\f13b";
 }
 
 .page-wrapper {
