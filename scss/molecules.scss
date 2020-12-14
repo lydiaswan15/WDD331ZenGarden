@@ -1,0 +1,83 @@
+header {
+    display: block;
+	margin: 0px;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row: 1;
+	height: 100vh;
+	background-color: white;
+}
+
+// Flashing header
+    header h1, header h2{
+        animation: topToBottom 6s linear infinite;
+        color: black;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        font-size: $headerOneSize;
+        margin: 0px; padding: 0px;
+        left: 120px;
+        top: 60vh;
+        padding-left: 10px;
+        border-left: solid 4px $hotPink;
+
+    }
+    header h1{
+        animation-delay: 0s;
+        -ms-animation-delay: 0s;
+        -webkit-animation-delay: 0s;
+    }
+
+    header h2{
+        animation-delay: 3s;
+        -ms-animation-delay: 3s;
+        -webkit-animation-delay: 3s;
+        font-size: $headerOneSize - 2em;
+    }
+
+footer{
+    background-color:$hotPink;
+    font-size: 24px;
+    width: 100vw;
+    margin-left: 0px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2em;
+    margin-top: 200px;   
+}
+
+.page-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.page-wrapper {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	//
+}
+
+.wrapper::before{
+    content: 'Menu';
+    font-size: $menuTextWidth;
+    max-width: $menuTextWidth;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row: 3;
+}
+
+.sidebar {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	grid-column-start: 1;
+	grid-column-end: 4;
+	
+}

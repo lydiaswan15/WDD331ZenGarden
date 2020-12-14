@@ -1,0 +1,52 @@
+// KEYFRAMES FOR THE FLICKERING H1
+
+    @keyframes topToBottom{
+        0% { opacity: 0; }
+        5% { opacity: 1; -moz-transform: translateY(-50px); }
+        10% { opacity: 1; -moz-transform: translateY(0px); }
+        25% { opacity: 1; -moz-transform: translateY(0px); }
+        30% { opacity: 0; -moz-transform: translateY(50px); }
+        80% { opacity: 0; }
+        100% { opacity: 0; }
+    }
+    @-webkit-keyframes topToBottom{
+        0% { opacity: 0; }
+        5% { opacity: 1; -webkit-transform: translateY(-50px); }
+        10% { opacity: 1; -webkit-transform: translateY(0px); }
+        25% { opacity: 1; -webkit-transform: translateY(0px); }
+        30% { opacity: 0; -webkit-transform: translateY(50px); }
+        80% { opacity: 0; }
+        100% { opacity: 0; }
+    }
+    @-ms-keyframes topToBottom{
+        0% { opacity: 0; }
+        5% { opacity: 1; -ms-transform: translateY(-50px); }
+        10% { opacity: 1; -ms-transform: translateY(0px); }
+        25% { opacity: 1; -ms-transform: translateY(0px); }
+        30% { opacity: 0; -ms-transform: translateY(50px); }
+        80% { opacity: 0; }
+        100% { opacity: 0; }
+    }
+
+// keyframe for adjusting the color of the navigation
+
+    @keyframes navigationColoring{
+        0%{
+            background-color: white;
+            opacity: 100%;
+        }
+        to{background-color: $hotPink;}
+    }
+
+// Animation for sliding the side bar
+
+    @keyframes sidebarSlide{
+        25%{
+            background-color: $hotPink;
+        }
+        100%{
+            transform: translateX(-20vw);
+            background-color: $hotPink;
+        }
+    }
+

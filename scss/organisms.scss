@@ -1,0 +1,295 @@
+// Side bar Menu thingamabob - opens on a hover. 
+// Adding the single word that will be used in the Menu. When hovered, the menu will appear. 
+.wrapper{
+    position: fixed;
+    top: 0px;
+    right: - $navWidth + 5vw;
+    padding-top: 1em;
+    height: 100vh;
+    width: $navWidth;
+    opacity: 90%;
+    transition: all .7s ease-in-out;display: flex; flex-direction: column;
+
+    .design-selection, .design-archives, .zen-resources{
+        padding-left: 75px;
+        height: 50px;
+        overflow: hidden;
+        transition: height .5s ease-in-out;
+        transition-delay: .1s;
+    }
+
+    .design-selection:hover{
+        $height: 260px;
+        @include navigationIn($height);
+    }
+    .design-archives:hover{
+        $height: 100px;
+        @include navigationIn($height);
+    }
+    .zen-resources:hover{
+        $height: 260px;
+        @include navigationIn($height);
+    }
+
+    &:hover{
+        transform: translateX(-20vw);
+        background-color: $hotPink;
+
+        &::before{
+            transition: opacity .5s ease-in-out;
+            opacity: 0%;
+        }
+    }
+}
+
+
+// DROP DOWN SECTIONS
+
+.supporting{
+	padding-top: 15em;
+	div{	
+		border-top: 10px solid $lightBlue;
+		grid-column: 1/4;
+		height: 130px;
+		transition: height .5s;
+		overflow: hidden;
+		margin-top: 2em; padding-bottom: 20px;
+	}
+	h3{
+		font-size: 3em;
+		display: flex;
+		justify-content: space-between;
+	}
+	p{
+		height: auto;
+	}
+	p, h3{
+		transition: transform .5s ease-in-out;
+	}
+
+	.explanation, .participation, .benefits, .requirements{
+		margin-left: $totalPageMargin;
+		margin-right: $totalPageMargin +$totalPageMargin;
+	}
+	.explanation:hover{
+		$height: 330px;
+		@include dropDownStyling($height);
+	}
+	.participation:hover{
+		$height: 350px;
+		@include dropDownStyling($height);
+	}
+	.benefits:hover{
+		$height: 250px;
+		@include dropDownStyling($height);
+	}
+	.requirements:hover{
+		$height: 500px;
+		@include dropDownStyling($height);
+	}
+	
+}
+
+
+.preamble{
+	padding: 100px;
+	padding-top: 0px;
+	height: 60vh;
+	overflow: hidden;
+	transition: all .3s ease-in-out;
+	h3{
+		line-height: 1.2em;
+		transition: all .3s ease-in-out;
+		height: 360px;
+		text-align: right;
+		font-size: $headerOneSize;
+		padding-left: 40%;
+		padding-right: 70px;
+		padding-top: 100px;
+		overflow: hidden;
+		&::after{
+			content: '↓';
+			display: block;
+			font-size: .8em;
+			transform: scaleY(1.5);
+			height: 20px;
+			color: $hotPink;
+		}
+	}
+	p{
+		text-align: right;
+		padding-right: 100px;
+		padding:0px; padding-right: 25%;
+		text-align: left;
+		font-size: 2em;
+		line-height: 1.2em;
+	}
+
+
+	&:hover{
+		transition: all 1s ease-in-out;
+		transition-delay: .5s;
+		background-color: $lightBlue;
+		transition-delay: .5s;
+		height: 100vh;
+		h3{
+			line-height: 1.2em;
+			transition: all .3s ease-in-out;
+			transition-delay: .5s;
+			height: 0px;
+			overflow: hidden;
+			padding: 0px; margin: 0px;
+			padding-top: 150px;
+
+		}
+	}
+}
+
+
+
+.summary{
+	display: block;
+	width: 80vw;
+	height: 100vh;
+	background-color: $orange;
+	padding-right: 300px;
+	:first-child{
+		font-size: 60px;
+		padding-left: 100px;
+		padding-top: 200px;
+		abbr{
+			padding: 0px;
+		}
+	}
+	:nth-child(2){
+		a{
+			font-size: 20px;
+			padding: 0px;
+		}
+		font-size: 20px;
+		padding-left: 100px;
+	}
+}
+
+
+//Circles Section
+// //#F09F2D
+
+// $circleHeight: 495px;
+// $circleWidth: 495px;
+// .summary, .preamble{
+// 	background-color: $orange;
+// 	margin: auto;
+// 	width: $circleWidth;
+// 	height: $circleHeight;
+// 	text-align: center;
+// 	margin-top: auto; 
+// 	margin-bottom: auto;
+// 	background: $orange;
+// 	border-radius: 50%;
+// 	grid-row: 2;
+// 	position: absolute;
+
+// 	//Pulsing Effect
+// 	transition: all .3s ease-in-out;
+// 	animation: pulse 2s infinite;
+// 	@keyframes pulse {
+// 		0% {
+// 			transform: scale(0.95);
+// 			box-shadow: 0 0 0 0 $hotPink;
+// 		}
+		
+// 		70% {
+// 			transform: scale(1);
+// 			box-shadow: 0 0 0 10px #e46b8e;
+// 		}
+		
+// 		100% {
+// 			transform: scale(0.95);
+// 			box-shadow: 0 0 0 0 #f3c0ce;
+// 		}
+// 	}
+// }
+
+// .explanation {
+// 	grid-column: 3;
+// }
+
+
+// // Summary and Preamble. 
+// .summary, .preamble {
+// 	background-color: $orange;
+// 	margin: 0;
+// 	width: $circleWidth;
+// 	height: $circleHeight;
+// 	background: $orange;
+// 	border-radius: 50%;
+// 	margin: 50px;
+// }
+
+// .summary {
+// 	&::before {
+// 		content: "Summary";
+// 		font-weight: bold;
+// 		font-size: 3em;
+// 		line-height: 100%;
+// 		text-align: center;
+// 		margin: 0;
+// 		position: absolute;
+// 		top: 40%;
+// 		-ms-transform: translateY(-50%);
+// 		transform: translateY(90%);
+// 		transform: translateX(-50%);
+// 	}
+// 	p {
+// 		margin-top: 120px;
+// 	}
+// 	grid-column: 1
+// }
+
+// .preamble{
+// 	h3 {
+// 		font-size: 3em;
+// 		text-align: center;
+// 		padding-top: 100px;
+// 		margin: 0;
+// 		position: absolute;
+// 		top: 50%;
+// 		-ms-transform: translateY(-90%);
+// 		transform: translateY(-90%);
+// 	}
+// 	p {
+// 		text-align: center;
+// 		display: none;
+// 		margin-top: 50px;
+// 	}
+// 	grid-column-start: 2;
+// 	grid-row: 2;
+// }
+
+// //Hover Effects
+
+// .preamble, .summary{
+// 	&:hover{
+// 		h3{
+// 			display: none;
+// 		}
+// 		p{
+// 			display: block;
+// 			padding: 15px;
+// 		}
+// 		border-radius: 10%;
+// 		// width: 1000px;
+// 		animation: none;
+// 		&::before {
+// 			content: none;
+// 		}
+// 	}
+// 	p {
+// 		text-align: center;
+// 		display: none;
+// 	}
+// }
+
+
+

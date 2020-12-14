@@ -1,0 +1,14 @@
+@mixin dropDownStyling ($height){
+    background-color: $orange;
+    height: $height;
+    animation: orangeBackground .5s;
+    animation-fill-mode: forwards;
+    p, h3{
+        transform: translateX(30px);
+        margin-right: 60px;
+    }
+}
+
+@mixin navigationIn ($height) {
+	height: $height;
+}
