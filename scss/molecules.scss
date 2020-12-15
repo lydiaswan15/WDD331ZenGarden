@@ -2,6 +2,10 @@
 @import '_mixins.scss';
 @import '_keyframes.scss';
 
+@import "fontawesome.scss";
+@import "solid.scss";
+@import "brands.scss";
+
 header {
     display: block;
 	margin: 0px;
@@ -44,26 +48,59 @@ footer{
     background-color:$hotPink;
     font-size: 24px;
     width: 100vw;
-    margin-left: -100px;
+    margin-left: -50px;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1em;
-    margin-top: 200px;   
+    padding: 2em;
+    margin-top: 200px; 
 }
 
 
 //Footer icons
-footer a::before {
-    content: "\f058";
-    font-family: "Font Awesome 5 Brands";
-    font-weight: 400;
+footer a {
+    @extend %fa-icon;
+    @extend .fab;
+    color: transparent;
+    font-size: 0px;
 }
 
 footer a.zen-validate-html::before{
-    font-family: "Font Awesome 5 Brands";
-    font-weight: 400;
-    content: "\f13b";
+    content: fa-content($fa-var-html5);
+    color: $lightTan;
+    width: 500px;
+    height: auto;
+    font-size: 50px;
+    pointer-events: none;
+    
+}
+
+footer a.zen-validate-css::before{
+    content: fa-content($fa-var-css3);
+    color: $lightTan;
+    font-size: 50px;
+    pointer-events: none;
+}
+
+footer a.zen-license{
+    color: $lightTan;
+    font-family: 'Lato', sans-serif;
+    margin-left: -40px;
+    font-size: 50px;
+}
+
+footer a.zen-accessibility::before{
+    content: fa-content($fa-var-accessible-icon);
+    color: $lightTan;
+    font-size: 50px;
+    pointer-events: none;
+}
+
+footer a.zen-github::before{
+    content: fa-content($fa-var-github);
+    color: $lightTan;
+    font-size: 50px;
+    pointer-events: none;
 }
 
 .page-wrapper {

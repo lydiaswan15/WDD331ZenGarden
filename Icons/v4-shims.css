@@ -1,0 +1,23 @@
+/*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa.fa-github {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.fa.fa-html5 {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.fa.fa-css3 {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.fa.fa-wheelchair-alt:before {
+  content: "\f368";
+}
+/*# sourceMappingURL=v4-shims.css.map */

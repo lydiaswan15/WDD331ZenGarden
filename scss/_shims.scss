@@ -1,0 +1,16 @@
+.#{$fa-css-prefix}.#{$fa-css-prefix}-github {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.#{$fa-css-prefix}.#{$fa-css-prefix}-html5 {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.#{$fa-css-prefix}.#{$fa-css-prefix}-css3 {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.#{$fa-css-prefix}.#{$fa-css-prefix}-wheelchair-alt:before { content: fa-content($fa-var-accessible-icon); }

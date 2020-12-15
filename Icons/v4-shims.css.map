@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;GAGG;AEHH,AAAA,GAAG,AAAA,UAAU,CAA+B;EAC1C,WAAW,EAAE,uBAAuB;EACpC,WAAW,EAAE,GAAG;CACjB;;AAED,AAAA,GAAG,AAAA,SAAS,CAA+B;EACzC,WAAW,EAAE,uBAAuB;EACpC,WAAW,EAAE,GAAG;CACjB;;AAED,AAAA,GAAG,AAAA,QAAQ,CAA+B;EACxC,WAAW,EAAE,uBAAuB;EACpC,WAAW,EAAE,GAAG;CACjB;;AAED,AAAA,GAAG,AAAA,kBAAkB,AAAA,OAAO,CAA+B;EAAE,OAAO,EDgB1D,OAA2B;CChBwE",
+    "sources": [
+        "v4-shims.scss",
+        "_variables.scss",
+        "_shims.scss"
+    ],
+    "names": [],
+    "file": "v4-shims.css"
+}
