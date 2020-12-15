@@ -1,5 +1,4 @@
-@import 'variables';
-@use 'variables';
+@use 'variables' as *;
 
 @import 'mixins';
 @use 'mixins';
