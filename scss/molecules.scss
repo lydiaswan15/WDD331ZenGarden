@@ -44,7 +44,7 @@ footer{
     background-color:$hotPink;
     font-size: 24px;
     width: 100vw;
-    // margin-left: -100px;
+    margin-left: -100px;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -55,11 +55,9 @@ footer{
 
 //Footer icons
 footer a::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+    content: "\f058";
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
 }
 
 footer a.zen-validate-html::before{

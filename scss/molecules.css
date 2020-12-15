@@ -141,6 +141,7 @@ footer {
   background-color: #D82C5d;
   font-size: 24px;
   width: 100vw;
+  margin-left: -100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,11 +156,8 @@ footer {
 }
 
 footer a::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+  content: "\f058";
+  font-family: "Font Awesome 5 Brands";
 }
 
 footer a.zen-validate-html::before {
