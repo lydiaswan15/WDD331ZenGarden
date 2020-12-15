@@ -1,19 +1,24 @@
+
 @use 'variables' as *;
 
-@import 'mixins';
-@use 'mixins';
+@import '_variables.scss';
+@use '_variables.scss';
 
-@import 'keyframes';
-@use 'keyframes';
 
-@import 'atoms';
-@use 'atoms';
+@import '_mixins.scss';
+@use '_mixins/scss';
 
-@import 'molecules';
-@use 'molecules';
+@import '_keyframes.scss';
+@use '_keyframes.scss';
 
-@import 'organisms';
-@use 'organisms';
+@import 'atoms.scss';
+@use 'atoms.scss';
+
+@import 'molecules.scss';
+@use 'molecules.scss';
+
+@import 'organisms.scss';
+@use 'organisms.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
